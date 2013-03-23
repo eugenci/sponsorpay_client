@@ -1,0 +1,26 @@
+.form {
+  margin: 1em 0.5em;
+  padding: 1em 0.5em;
+}
+
+.offers {
+}
+
+.offer  {
+  width: 20%;
+	float:left;
+  padding: 0.3em;
+  margin: 0.5em;
+}
+
+.offer .title {
+  text-align: center;
+}
+
+.offer .payout {
+  text-align: center;
+}
+
+.offer .thumbnail {
+  text-align: center;
+}

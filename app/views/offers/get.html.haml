@@ -1,0 +1,12 @@
+.form
+  = render 'form'
+
+.status
+  = @message
+
+- if @offers.present?
+  .offers
+    = render partial: 'offer', collection: @offers
+- else
+  .no_offers
+    No Offers

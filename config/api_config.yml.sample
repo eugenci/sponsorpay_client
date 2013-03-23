@@ -1,0 +1,26 @@
+defaults: &defaults
+  base_url: 'http://api.sponsorpay.com/feed/v1'
+  appid: your-application-id-here
+  api_key: your-api-key-here
+  fmt: json
+  uid: player1
+  device_id: your-device-id-here
+  locale: de
+  ip: your-ip
+  offer_types: 112
+
+development:
+  <<: *defaults
+  device_id: your-device-id
+  api_key: your-api_key
+  appid: 157
+  ip: 109.235.143.113
+
+test:
+  <<: *defaults
+  device_id: “ttttttttttttttttt eeeeeeeeeeeeeeeee ssssst”
+  appid: 1
+  api_key: 'test_api_key'
+
+production:
+  <<: *defaults

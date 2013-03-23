@@ -1,0 +1,46 @@
+= Ruby Developer Challenge
+
+== Offers JSON API
+
+The whole idea of this challenge is to use a JSON API and render the results of the
+response
+
+== Problem
+
+Given appid, api_key (see api_config.yml.sample for full list), build a signed request, send request,
+get answer, check it for validity and then render results.
+
+== Solution
+
+I make use of ActiveResource to map local offer object to remote web service.
+I use ActiveResource-response gem to access raw response body from web service.
+
+Interesting file to look into:
+
+  models/offer
+  controllers/offers_controller
+  lib/api_config
+  lib/commons
+
+And obivously tests
+
+== How to use
+
+1. Rename config/api_config.yml.sample to config/api_config.yml
+2. Add in api_config.yml your api_key (device_id etc)
+3. Run
+
+  bundle
+  rails s
+
+4. Then open browser and check http://localhost:3000
+
+== How to test
+
+Classical way: rake test
+However, I recommand to use zeus gem (https://github.com/burke/zeus).
+When use zeus gem command to test is
+
+  zeus test test/*
+
+all tests will run in less then a second!
